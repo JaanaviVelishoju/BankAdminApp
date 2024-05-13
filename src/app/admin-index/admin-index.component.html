@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="nav.toggle()"><mat-icon>menu</mat-icon></button>
+    <span> Admin App</span>
+    <a><button mat-button style="margin-left:70%">About Us</button></a>
+<a><button mat-button style="margin-left:70%">Contact Us</button></a>
+    <span class="example-spacer"></span>
+    <button mat-button  routerLink="home"><mat-icon>home</mat-icon></button> 
+     <button mat-button routerLink="profile"><mat-icon>person</mat-icon></button> 
+    
+    <a><button mat-button style="margin-right:70%">Login</button></a>
+     <a><button mat-button style="margin-right:30%">Logout</button></a>
+     </mat-toolbar>
+
+     <mat-sidenav-container class="sidenav-wrapper">
+      <mat-sidenav mode="side" #nav opened>
+
+      <button mat-button [matMenuTriggerFor]="menu" color="primary">Employees</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item color="primary" routerLink="getemps">Employee Info</button>
+  <button mat-menu-item color="primary" routerLink="saveemp">Add Employee</button>
+</mat-menu>
+<br>
+<br>
+<button mat-button [matMenuTriggerFor]="menu" color="primary">Departments</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item color="primary" routerLink="getdepts">Department Info</button>
+  <button mat-menu-item color="primary" routerLink="savedept">Add Department</button>
+</mat-menu>
+        </mat-sidenav>
+      <mat-sidenav-content class="displaycom">
+        <router-outlet ></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>

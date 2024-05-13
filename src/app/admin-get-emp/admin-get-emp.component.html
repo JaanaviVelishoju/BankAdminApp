@@ -1,0 +1,28 @@
+<div class="container-fluid">
+<div>
+    <label for="">Enter id </label>
+    <input type="text" [(ngModel)]="empid"  >
+   <button (click)="SubmitClick()">Enter</button>
+</div >
+
+    <table class="table table-hover" *ngIf="show">
+        <thead><tr>
+            <th>EmpId</th>
+            <th>EmpName</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Department</th>
+        </tr></thead>
+        <tbody><tr>
+            <td>{{employee.empid}}</td>
+            <td>{{employee.ename}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.sal}}</td>
+            <td>{{employee.deptno}}</td>
+        </tr></tbody>
+    </table>
+    <div class="mt-5">
+        <a routerLink="/getemps" class="btn btn-primary"> Get All Employees</a>
+    </div>
+    
+</div>

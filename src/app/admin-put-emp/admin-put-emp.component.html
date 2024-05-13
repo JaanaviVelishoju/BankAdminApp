@@ -1,0 +1,36 @@
+<mat-card class="example-card">
+    <mat-card-content class="heading">Update Employee</mat-card-content>
+<form class="example-form">
+    <mat-form-field  appearance="outline">
+        <mat-label>Enter Employee Id</mat-label>
+        <input matInput name="empid" [(ngModel)]="emp.empid" disabled placeholder="Employee Id">
+        </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Enter Employee Name</mat-label>
+        <input matInput name="ename" [(ngModel)]="emp.ename" placeholder="Employee Name">
+        </mat-form-field>
+
+        <div class="example-container">
+            <mat-form-field>
+              <mat-label>Enter your email</mat-label>
+              <input matInput name="email" [(ngModel)]="emp.email" placeholder="pat@example.com" >
+              
+            </mat-form-field>
+          </div>
+          
+          <mat-form-field appearance="outline">
+            <mat-label>Enter Salary</mat-label>
+            <input matInput name="sal" [(ngModel)]="emp.sal" placeholder="Salary">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Enter Department No</mat-label>
+                <input matInput name="deptno" [(ngModel)]="emp.deptno" placeholder="Department no">
+                </mat-form-field>
+            </form>
+
+            <div class="buttons">
+            <button mat-raised-button (click)="updatedata()" color="primary" >Update</button>&nbsp;
+            <button routerLink="/getemps" mat-raised-button color="warn" >Back</button>
+        </div>
+</mat-card>
